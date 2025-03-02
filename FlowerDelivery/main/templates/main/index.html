@@ -1,0 +1,48 @@
+{% extends 'main/layoute.html' %}
+
+{% block title %}
+    <title>Главная страница</title>
+{% endblock %}
+
+{% block content%}
+<h1>Главная страница</h1>
+<div class="container">
+    <div class="jumbotron text-center mt-5">
+        <h1 class="display-4">Добро пожаловать в FlowerDelivery!</h1>
+        <p class="lead">Мы дарим радость и красоту с 2010 года</p>
+        <hr class="my-4">
+        <p>Закажите свежие и красивые цветы с доставкой на дом. У нас вы найдете идеальный букет для любого случая!</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'catalog' %}" role="button">Посмотреть каталог</a>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-4 text-center">
+            <h2>Свежие цветы</h2>
+            <p>Мы работаем только с проверенными поставщиками, чтобы вы получали самые свежие и красивые цветы.</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <h2>Быстрая доставка</h2>
+            <p>Доставка в течение 2 часов по городу. Мы ценим ваше время!</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <h2>Широкий ассортимент</h2>
+            <p>Букеты, композиции, комнатные растения — у нас есть всё для вашего праздника.</p>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-12 text-center">
+            <h2>Почему выбирают нас?</h2>
+            <p>FlowerDelivery — это не просто доставка цветов. Это эмоции, которые мы дарим нашим клиентам. Мы заботимся о каждом букете, как о произведении искусства.</p>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-12 text-center">
+            <h2>Специальные предложения</h2>
+            <p>У нас всегда есть акции и скидки для наших клиентов. Следите за обновлениями!</p>
+            <a class="btn btn-success btn-lg" href="{% url 'catalog' %}" role="button">Узнать больше</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

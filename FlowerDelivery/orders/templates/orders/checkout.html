@@ -1,0 +1,19 @@
+{% extends 'main/layoute.html' %}
+
+{% block title %}
+    <title>Оформление заказа</title>
+{% endblock %}
+
+{% block content%}
+<form method="post">
+    {% csrf_token %}
+    <label for="delivery_date">Дата доставки:</label>
+    <input type="date" id="delivery_date" name="delivery_date" required>
+    <label for="delivery_time">Время доставки:</label>
+    <input type="time" id="delivery_time" name="delivery_time" required>
+    <label for="comment">Комментарий:</label>
+    <textarea id="comment" name="comment"></textarea>
+    <button type="submit">Подтвердить заказ</button>
+</form>
+
+{% endblock %}

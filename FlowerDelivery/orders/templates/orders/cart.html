@@ -1,0 +1,32 @@
+{% extends 'main/layoute.html' %}
+
+{% block title %}
+    <title>Оформление заказа</title>
+{% endblock %}
+
+{% block content%}
+<body>
+    <h1>Your Cart</h1>
+
+    {% if cart_items %}
+        <ul>
+            {% for item in cart_items %}
+                <li>
+                    <h2>{{ item.product.name }}</h2>
+                    <p>Quantity: {{ item.quantity }}</p>
+                    <p>Price per item: ${{ item.product.price }}</p>
+                    <p>Total price: ${{ item.total_price }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+        <h2>Total Cart Price: ${{ total_cart_price }}</h2>
+    {% else %}
+        <p>Your cart is empty.</p>
+    {% endif %}
+
+    <a href="{% url 'catalog' %}">Continue Shopping</a>
+    <a href="{% url 'checkout' %}">Оформить заказ</a>
+    <a href="{% url 'clear_cart' %}">Clear Cart</a>
+</body>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'main/layoute.html' %}
+
+{% block title %}
+    <title>Catalog</title>
+{% endblock %}
+
+{% block content%}
+<h1>Каталог</h1>
+    {% if products %}
+        <ul>
+            {% for product in products %}
+                <li>
+                    <h2>{{ product.name }}</h2>
+                    <p>{{ product.description }}</p>
+                    <p>Цена: {{ product.price }} руб.</p>
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}" width="100">
+                    {% endif %}
+                    <a href="{% url 'add_to_cart' product.id %}">Добавить в корзину</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No products available.</p>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'main/layoute.html' %}
+
+{% block title %}
+    <title>Оформление заказа</title>
+{% endblock %}
+
+{% block content%}
+<body>
+    <h1>Заказ успешно оформлен!</h1>
+    <p>Спасибо за ваш заказ. Мы свяжемся с вами для уточнения деталей.</p>
+    <a href="{% url 'catalog' %}">Продолжить покупки</a>
+</body>
+
+{% endblock %}
