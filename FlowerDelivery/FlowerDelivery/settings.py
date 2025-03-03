@@ -132,3 +132,9 @@ STATICFILES_DIRS = [
 ]
 
 AUTH_USER_MODEL = 'users.User'
+
+# Токен Telegram-бота
+TELEGRAM_BOT_TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN'
+
+# ID чата или канала, куда будут отправляться уведомления
+TELEGRAM_CHAT_ID = 'YOUR_TELEGRAM_CHAT_ID'

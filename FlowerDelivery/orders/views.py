@@ -3,6 +3,7 @@ from .models import Order, OrderItem
 from products.models import Product
 from .forms import OrderForm
 from django.contrib import messages
+from .bot import send_order_notification
 
 def checkout(request):
     if request.method == 'POST':
@@ -35,6 +36,9 @@ def checkout(request):
 
             # Очищаем корзину
             request.session['cart'] = {}
+
+            # Отправляем уведомление в Telegram
+            send_order_notification(order)
 
             # Показываем сообщение об успехе
             messages.success(request, 'Заказ успешно оформлен!')
