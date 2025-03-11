@@ -25,8 +25,13 @@
                 <span>FlowerDelivery</span>
                 <ul>
                     <li><a href="{% url 'index' %}">Главная страница</a></li>
-                    <li><a href="{% url 'register' %}">Страница регистрации</a></li>
-                    <li><a href="{% url 'login' %}">Страница входа</a></li>
+                    <li><a href="{% url 'register' %}">Регистрация</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'logout' %}">Выход</a></li>
+                        <li>Привет, {{ user.username }}!</li>
+                    {% else %}
+                        <li><a href="{% url 'login' %}">Вход</a></li>
+                    {% endif %}
                     <li><a href="{% url 'catalog' %}">Каталог</a></li>
                 </ul>
             </aside>

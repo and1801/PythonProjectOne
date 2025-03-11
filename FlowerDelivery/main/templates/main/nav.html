@@ -1,7 +1,8 @@
 <Ul>
     <li><a href="{% url 'index' %}">Главная страница</a></li>
     <li><a href="{% url 'register' %}">Страница регистрации</a></li>
-    <li><a href="{% url 'login' %}">Страница входа</a></li>
+    <li><a href="{% url 'login' %}">Вход</a></li> <!-- Измените на встроенную ссылку -->
+    <li><a href="{% url 'logout' %}">Выход</a></li> <!-- Добавьте ссылку на выход -->
     <li><a href="{% url 'catalog' %}">Каталог</a></li>
     <li><a href="{% url 'view_cart' %}">Корзина</a></li>
 </ul>+

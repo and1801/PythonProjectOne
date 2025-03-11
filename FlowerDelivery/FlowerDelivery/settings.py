@@ -134,7 +134,10 @@ STATICFILES_DIRS = [
 AUTH_USER_MODEL = 'users.User'
 
 # Токен Telegram-бота
-TELEGRAM_BOT_TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN'
+TELEGRAM_BOT_TOKEN = '6749263432:AAGxw0fg5ksYHwTy34H4Djuy5daWFl8Bws8'
 
 # ID чата или канала, куда будут отправляться уведомления
-TELEGRAM_CHAT_ID = 'YOUR_TELEGRAM_CHAT_ID'
+TELEGRAM_CHAT_ID = '415445789'
+
+LOGIN_REDIRECT_URL = '/'  # Куда перенаправлять после входа
+LOGOUT_REDIRECT_URL = '/'  # Куда перенаправлять после выхода

@@ -6,6 +6,7 @@ class Order(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     delivery_date = models.DateField()
     delivery_time = models.TimeField()
+    address = models.CharField(max_length=255, default='Не указан')
     comment = models.TextField(blank=True)
     STATUS_CHOICES = [
         ('new', 'Новый'),

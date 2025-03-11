@@ -26,6 +26,7 @@ urlpatterns = [
     path('products/', include('products.urls')),
     path('register/', include('users.urls')),
     path('orders/', include('orders.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),  # Встроенная система входа/выхода
 ]
 
 if settings.DEBUG:

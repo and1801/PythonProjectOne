@@ -11,8 +11,8 @@ def index(request):
 def register(request):
     return render(request, 'main/register.html')
 
-def login(request):
-    return render(request, 'main/login.html')
+# def login(request):
+#     return render(request, 'main/login.html')
 
 # def catalog(request):
 #     return render(request, 'main/catalog.html')
