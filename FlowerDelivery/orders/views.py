@@ -4,7 +4,7 @@ from products.models import Product
 from .forms import OrderForm
 from django.contrib import messages
 from .bot import send_order_notification
-
+import asyncio
 
 
 
@@ -71,8 +71,9 @@ def checkout(request):
         try:
             send_order_notification(order)
         except Exception as e:
-            # Логируем ошибку, если уведомление не отправилось
-            print(f"Ошибка при отправке уведомления в Telegram: {e}")
+            messages.error(request, f'Ошибка: {str(e)}')
+
+
 
         # Перенаправляем на страницу успешного оформления заказа
         return redirect('order_success')
